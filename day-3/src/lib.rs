@@ -19,12 +19,6 @@ pub mod solution {
             end_index + 1
         };
 
-        println!("start_index_safe {}", start_index_safe);
-        println!("end_index_safe {}", end_index_safe);
-        // println!("end_index {}", end_index);
-        // println!("start_index {}", start_index);
-        // println!("current_line_characters {:?}", current_line_characters);
-
         let previous_line_characters = previous_line[start_index_safe..end_index_safe + 1].chars();
         let next_line_characters = next_line[start_index_safe..end_index_safe + 1].chars();
         let current_line_left = current_line_characters
@@ -32,12 +26,6 @@ pub mod solution {
             .unwrap_or(&'.');
         let current_line_right = current_line_characters.get(end_index_safe).unwrap_or(&'.');
         let current_line_characters_to_check = vec![current_line_left, current_line_right];
-
-        // println!("current_line_left {}", current_line_left);
-        // println!("current_line_right {}", current_line_right);
-        // println!("previous_line_characters {:?}", previous_line_characters);
-        // println!("current_line_characters {:?}", current_line_characters);
-        println!("next_line_characters {:?}", next_line_characters);
 
         for char in previous_line_characters {
             if char != '.' && !char.is_numeric() {

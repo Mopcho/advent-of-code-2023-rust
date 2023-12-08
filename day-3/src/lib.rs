@@ -62,7 +62,6 @@ pub mod solution {
             let mut current_number = String::new();
 
             let line_characters: Vec<char> = line.chars().collect();
-            println!("line_index {}", line_index);
             let previous_line = if line_index == 0 {
                 fake_line
             } else {
